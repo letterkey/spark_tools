@@ -1,7 +1,6 @@
 package study.sql
 
 import org.apache.spark.sql.SQLContext
-import org.apache.spark.sql.test.LocalSQLContext
 import org.apache.spark.{SparkContext, SparkConf}
 
 /**
