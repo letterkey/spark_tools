@@ -40,7 +40,6 @@ object FlumeToMysql {
 
   def main(args: Array[String]) {
 
-    StreamingExamples.setStreamingLogLevels()
 
     val batchInterval = Milliseconds(2000)
     val conf = new Configuration()

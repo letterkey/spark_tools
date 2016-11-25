@@ -23,7 +23,6 @@ import org.apache.spark.storage.StorageLevel
 object NetworkWordCount {
 
   def main(args: Array[String]) {
-    StreamingExamples.setStreamingLogLevels()
     // Create the context with a 1 second batch size
     val sparkConf = new SparkConf().setAppName("NetworkWordCount")
 //      sparkConf.setMaster("local")

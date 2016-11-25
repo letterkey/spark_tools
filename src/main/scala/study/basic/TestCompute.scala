@@ -3,8 +3,8 @@ package study.basic
 import org.apache.spark.{TaskContext, SparkConf, SparkContext}
 
 /**
- *测试RDD的分区计算
- */
+  * 测试RDD的分区计算
+  */
 object TestCompute {
    def main(args: Array[String]) {
      val sparkConf = new SparkConf()

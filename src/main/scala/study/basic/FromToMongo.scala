@@ -33,7 +33,7 @@ object FromToMongo {
     val saveRDD = countsRDD.map((tuple) => {
       var bson = new BasicBSONObject()
       bson.put("word", tuple._1)
-      bson.put("count", tuple._2)
+      bson.put("count", tuple._2.toString)
       (null, bson)
     })
     // Only MongoOutputFormat and config are relevant

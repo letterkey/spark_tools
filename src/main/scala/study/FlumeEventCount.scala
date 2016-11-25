@@ -46,7 +46,6 @@ object FlumeEventCount {
 
   def main(args: Array[String]) {
 
-    StreamingExamples.setStreamingLogLevels()
 
     val batchInterval = Milliseconds(2000)
 

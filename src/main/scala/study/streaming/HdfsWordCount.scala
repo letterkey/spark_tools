@@ -2,7 +2,6 @@ package study.streaming
 
 import org.apache.spark.SparkConf
 import org.apache.spark.streaming.{Seconds, StreamingContext}
-import study.StreamingExamples
 
 /**
  * Created by root on 15-6-30.
@@ -14,7 +13,6 @@ object HdfsWordCount {
       System.exit(1)
     }
 
-    StreamingExamples.setStreamingLogLevels()
     val sparkConf = new SparkConf().setMaster(args(1)).setAppName("HdfsWordCount")
     // Create the context
     val ssc = new StreamingContext(sparkConf, Seconds(5))
