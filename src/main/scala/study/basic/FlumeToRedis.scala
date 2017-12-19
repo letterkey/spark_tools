@@ -2,7 +2,9 @@ package study.basic
 
 import java.util.concurrent.TimeUnit
 
-import com.typesafe.config.ConfigFactory
+import org.apache.spark.sql.SparkSession
+
+//import com.typesafe.config.ConfigFactory
 import org.apache.commons.pool2.impl.GenericObjectPoolConfig
 import org.apache.spark.broadcast.Broadcast
 import org.apache.spark.storage.StorageLevel
@@ -92,20 +94,15 @@ object FlumeToRedis {
   }
 
   def main(args: Array[String]) {
-    val config = ConfigFactory.load()
-    val master = config.getString("spark.master.ip")
-    val ip = config.getString("spark.listen.ip")
-    val port = config.getInt("spark.listen.port")
-    val redisIp = config.getString("spark.redis.ip")
-    val redisPort = config.getInt("spark.redis.port")
-    val redisPwd = config.getString("spark.redis.pwd")
+
+    val Array(master,ip,port,redisIp,redisPort,redisPwd) = args
 
     val ssc = new StreamingContext(master, "AppDownloadCount", Seconds(1))
-    val source = FlumeUtils.createStream(ssc, ip, port, StorageLevel.MEMORY_ONLY)
+    val source = FlumeUtils.createStream(ssc, ip, port.toInt, StorageLevel.MEMORY_ONLY)
 
     //使用线程池复用链接
     val pool = {
-      val pool = createRedisPool(redisIp, redisPort, redisPwd)
+      val pool = createRedisPool(redisIp, redisPort.toInt, redisPwd)
       ssc.sparkContext.broadcast(pool)
     }
 
