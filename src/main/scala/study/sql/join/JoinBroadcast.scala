@@ -5,6 +5,7 @@ import org.apache.spark.sql.SparkSession
 import scala.collection.mutable.ArrayBuffer
 
 /**
+  * broadcast方式join
   * Created by YMY on 17/12/18.
   */
 object JoinBroadcast {
