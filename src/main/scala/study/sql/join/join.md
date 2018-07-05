@@ -11,4 +11,5 @@
 
 [参考1:原理](http://sharkdtu.com/posts/spark-sql-join.html) <br/>
 [参考2:实例](http://www.waitingforcode.com/apache-spark-sql/sort-merge-join-spark-sql/read#sort-merge_join_in_spark_sql)<br/>
-[参考3](http://use-the-index-luke.com/sql/join/sort-merge-join)
+[参考3](http://use-the-index-luke.com/sql/join/sort-merge-join)<br/>
+[参考4：join实例](http://blog.csdn.net/anjingwunai/article/details/51934921)

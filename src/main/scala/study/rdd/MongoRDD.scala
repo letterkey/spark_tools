@@ -5,6 +5,7 @@ import com.mongodb.client.MongoCursor
 import com.mongodb.{MongoClient, MongoClientURI}
 import org.apache.spark.{Partition, SparkContext, TaskContext}
 import org.apache.spark.annotation.DeveloperApi
+import org.apache.spark.internal.Logging
 import org.apache.spark.rdd.RDD
 import org.bson.Document
 
@@ -13,7 +14,7 @@ import org.bson.Document
   *
 **/
 class MongoRDD(sc:SparkContext,mongoUrl:String,database:String,collection:String,query:Document,numPartitions:Int)
-    extends RDD[Document](sc,Nil){
+    extends RDD[Document](sc,Nil) {
 
     val total:Long = new MongoClient(new MongoClientURI(mongoUrl)).getDatabase(database).getCollection(collection).count(query)
 

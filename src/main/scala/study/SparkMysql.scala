@@ -3,7 +3,7 @@ package study
 import java.util.Properties
 
 import org.apache.spark.mllib.fpm.FPGrowth
-import org.apache.spark.sql.SQLContext
+import org.apache.spark.sql.{SQLContext, SparkSession}
 import org.apache.spark.storage.StorageLevel
 import org.apache.spark.{SparkConf, SparkContext}
 
@@ -30,6 +30,5 @@ object SparkMysql{
     val b_i = order_item.join(order,order("ORDER_ID")===order_item("ORDER_ID"),"inner").select("BUY_ACCOUNT_ID","GOODS_ID")
     b_i.printSchema()
     b_i.groupBy("BUY_ACCOUNT_ID").count().where("count > 1").show(100)
-
   }
 }
