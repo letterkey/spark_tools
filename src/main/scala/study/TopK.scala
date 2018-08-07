@@ -1,7 +1,5 @@
 package study
 
-import org.apache.spark.SparkContext._
-
 import org.apache.spark.{SparkContext,SparkConf}
 
 /**

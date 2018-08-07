@@ -10,7 +10,7 @@ object Test {
     val data = """[[237,945261],["Android","4.4.4","samsung SM-N9100","Android Agent","1.0.5","171cc02d-2d5f-4cd8-ad32-7fe72a5d20f3","CN","310000","samsung",{"size":"normal"},"中国","上海市"],0.0,[],[[{"scope":"","name":"Memory/Used"},{"count":1,"total":10.818359375,"min":10.818359375,"max":10.818359375,"sum_of_squares":117.03689956665039}],[{"scope":"","name":"Supportability/AgentHealth/Collector/Harvest"},{"count":1,"total":0.31700000166893005,"min":0.31700000166893005,"max":0.31700000166893005,"sum_of_squares":0.10048900105810166}]],[],[],[]]"""
     val data1 ="""{"dataType":"Data","status":true,"timestamp":1422514549730,"token":"AF399285AA6856521FA496EB3D47134063"}"""
     val l1 = JSON.parseFull(data).get.asInstanceOf[List[List[Any]]]
-    println(l1(01)(1))
+    println(l1(1)(1))
 
 
     val l2 = JSON.parseFull(data1).get.asInstanceOf[Map[String,String]]

@@ -1,10 +1,8 @@
 package study.ml
 
-import org.apache.spark.ml.clustering.DistributedLDAModel
 import org.apache.spark.mllib.clustering.LDA
 import org.apache.spark.mllib.linalg.Vectors
 import org.apache.spark.{SparkConf, SparkContext}
-import org.dmg.pmml.GeneralRegressionModel.Distribution
 
 /**
   * Created by yinmuyang on 17/4/18.

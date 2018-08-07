@@ -6,7 +6,6 @@ import java.util.Date
 import org.apache.spark.{SparkConf, SparkContext}
 import org.apache.spark.sql.SQLContext
 import org.apache.spark.SparkContext._
-import study.utils._
 import scala.collection.mutable
 import scala.collection.mutable.ArrayBuffer
 
