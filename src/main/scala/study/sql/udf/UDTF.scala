@@ -8,7 +8,7 @@ import org.apache.spark.sql.SparkSession
 object UDTF {
     def main(args: Array[String]) {
 
-        val sqlContext = SparkSession.builder().master("local").getOrCreate().sqlContext;
+        val sqlContext = SparkSession.builder().master("local").getOrCreate().sqlContext
         val sparkContext = sqlContext.sparkContext
         val a = sparkContext.parallelize(Array((Array("1","fruit"), "apple,banana,pear,jwb"), (Array("2","animal"), "pig,cat,dog,tiger")))
         val b = a.flatMapValues(_.split(",")).map(ele=>{
