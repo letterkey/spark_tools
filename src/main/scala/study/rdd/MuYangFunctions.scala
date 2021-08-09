@@ -23,7 +23,7 @@ class MuYangFunctions (rdd:RDD[SalesRecord]) {
 class MuYangFunctions_Start (sc : SparkContext) {
 
   // 自定义RDD 返回ＲＤＤ
-  def read_text_file(file_path:String) = new MuYangRDD_start(sc,file_path)
+//  def read_text_file(file_path:String) = new MuYangRDD_start(sc,file_path)
 }
 
 object MuYangFunctions {

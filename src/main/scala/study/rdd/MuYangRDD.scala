@@ -25,12 +25,14 @@ class MuYangRDD(prex:RDD[SalesRecord],after:Double) extends RDD[SalesRecord](pre
   * @param prex
   * @param file_path
   */
-class MuYangRDD_start(prex:SparkContext, file_path:String) extends RDD[String](prex,Seq.empty){
-  override def compute(split: Partition, context: TaskContext): Iterator[SalesRecord] = {
-
-  }
-
-  override protected def getPartitions: Array[Partition] = {
-    firstParent[SalesRecord].partitions
-  }
-}
+//class MuYangRDD_start(prex:SparkContext, file_path:String)
+//  extends RDD[String](prex,Seq.empty)
+//{
+//  override def compute(split: Partition, context: TaskContext): Iterator[SalesRecord] = {
+//    Nil
+//  }
+//
+//  override protected def getPartitions: Array[Partition] = {
+//    firstParent[SalesRecord].partitions
+//  }
+//}

@@ -25,7 +25,7 @@ object TestFunctions {
     salesRecordRDD.discount(11.0)
 
     // 调用自定义RDD
-    sc.read_text_file(file_path)
+//    sc.read_text_file(file_path)
 
   }
 
